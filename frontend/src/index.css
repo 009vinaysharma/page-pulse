@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-midnight-900 text-slate-100;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible keyboard focus ring across the app */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid theme('colors.pulse.400');
+  outline-offset: 2px;
+}
+
+/* Subtle grid backdrop used behind the hero for a "diagnostic dashboard" feel */
+.grid-backdrop {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Reusable "card" surface — rounded, subtle border, soft glass effect */
+.pulse-card {
+  @apply bg-midnight-800/70 border border-white/5 rounded-2xl backdrop-blur-sm;
+}

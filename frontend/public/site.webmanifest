@@ -1,0 +1,13 @@
+{
+  "name": "Page Pulse",
+  "short_name": "Page Pulse",
+  "description": "Instant website health audits — status, speed, and SEO basics for any URL.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1120",
+  "theme_color": "#0B1120",
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
